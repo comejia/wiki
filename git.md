@@ -42,7 +42,7 @@ In this case, it compares the top of "branch2" with some common ancestor of both
 	
 	$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
-2) Type Enter to use default value
+I recommended you type Enter to use default value
 
 3) Add ssh key to ssh-agent
 
@@ -53,3 +53,7 @@ In this case, it compares the top of "branch2" with some common ancestor of both
 5) Paste the public key in github ssh section:
 
 	Setting -> SSH and GPG keys -> New SSH key
+
+* NOTE: To use ssh conexion you need clone repository with ssh url
+
+
