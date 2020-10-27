@@ -36,3 +36,20 @@ In this case, it compares the top of "branch2" with some common ancestor of both
 	$ git merge upstream/master
 
 
+# Github ssh credential
+
+1) Open terminal and put:
+	
+	$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+2) Type Enter to use default value
+
+3) Add ssh key to ssh-agent
+
+	$ ssh-add ~/.ssh/id_rsa
+
+4) Copy public key, e.g ~/.ssh/id_rsa.pub,
+
+5) Paste the public key in github ssh section:
+
+	Setting -> SSH and GPG keys -> New SSH key
