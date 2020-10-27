@@ -56,4 +56,48 @@ I recommended you type Enter to use default value
 
 * NOTE: To use ssh conexion you need clone repository with ssh url
 
+# Uploading large files
 
+1) Download git-lfs repository source
+
+	$ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+	
+2) Install git-lfs
+
+	$ sudo apt-get install git-lfs
+	
+3) Run this command once time
+
+	$ git lfs install
+
+4) Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes)
+
+	$ git lfs track "*.psd"
+
+5) Upload file to Github
+
+	$ git add file.psd
+	
+	$ git commit -m "Add design file"
+	
+	$ git push origin master
+	
+
+* NOTE: You repository can't be empty (e.g. new repository)
+
+# Problems with "unrelated-histories"
+
+Forcing:
+
+	$ git pull origin branch_name --allow-unrelated-histories
+	$ git merge origin branch_name --allow-unrelated-histories
+	$ git push origin branch_name --allow-unrelated-histories
+	
+If you want get remote data:
+
+	$ git fetch --all
+	$ git reset --soft origin/branch_name
+	$ git add --all
+	$ git commit -am "new commit over remote commit"
+	$ git push origin branch_name
+	
