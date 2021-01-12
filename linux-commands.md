@@ -23,3 +23,18 @@ $ lsblk
 # dd bs=4M if=/path/to/distro.iso of=/dev/sdx status=progress oflag=sync
 ```
 
+## Delete old kernels
+1) List all Linux kernel image
+```
+# dpkg --list | egrep -i --color 'linux-image|linux-headers'
+```
+
+2) Delete unused kernel images
+```
+# apt-get --purge autoremove linux-image-x.y.z-tt-abc
+```
+
+3) Update grub
+```
+# update-grub # or update-grub2
+```
