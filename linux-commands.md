@@ -38,3 +38,29 @@ $ lsblk
 ```
 # update-grub # or update-grub2
 ```
+
+## Change default program version
+I used python for this example
+
+1) Update python alternatives list
+```
+# update-altenatives --list python
+```
+Command above shows an error like: 'no alternatives for python'
+
+2) List available python versions
+```
+$ ls /usr/bin/python*
+```
+
+3) Install python alternatives
+```
+# update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+# update-alternatives --install /usr/bin/python python /usr/bin/python3.5 2
+```
+NOTE: the integer number at the end of each command denotes a priority. Higher number means higher priority
+
+4) Switch between python versions
+```
+# update-alternatives --config python
+```
