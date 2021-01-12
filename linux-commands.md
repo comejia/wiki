@@ -46,7 +46,7 @@ I used python for this example
 ```
 # update-altenatives --list python
 ```
-Command above shows an error like: 'no alternatives for python'
+Command above shows an error like: `no alternatives for python`
 
 2) List available python versions
 ```
