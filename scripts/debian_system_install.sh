@@ -54,7 +54,7 @@ apt-get install -y pulseaudio pavucontrol mpv mediainfo file highlight w3m-img c
 apt-get install -y xbindkeys fonts-noto-color-emoji xbacklight
 
 # Extra tools
-apt-get install -y ranger rsync atool xrandr mpt-tools firefox-esr
+apt-get install -y ranger rsync atool mpt-tools firefox-esr
 
 # Windows manager
 apt-get install -y i3
