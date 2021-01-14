@@ -64,3 +64,9 @@ NOTE: the integer number at the end of each command denotes a priority. Higher n
 ```
 # update-alternatives --config python
 ```
+
+## Search packages
+```
+$ apt-cache search package_name # search package_name
+$ apt-cache show package_name # show all info of package_name
+```
