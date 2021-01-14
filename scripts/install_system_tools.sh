@@ -10,14 +10,17 @@ echo "Installing certificates..."
 apt-get install -y ca-certificates
 echo "Installing certificates...DONE"
 
-echo "Updating system repositories..."
-echo "Testing repository"
+echo "Updating repositories..."
+echo "Add contrib and non-free option to source.list"
+read -p "Press ENTER to continue"
+echo "Adding testing repository"
 echo "deb http://deb.debian.org/debian/ testing main contrib non-free" >> /etc/apt/sources.list
-echo "Buster backports"
+echo "Adding buster-backports repository"
 echo "deb http://deb.debian.org/debian/ buster-backports main contrib non-free" >> /etc/apt/sources.list
 read -p "Check changes in sources.list and press ENTER to continue"
 apt-get update
-echo "Updating system repositories...DONE"
+echo "Updating repositories...DONE"
+
 
 echo "Updating kernel image..."
 apt-cache search linux-image
@@ -30,6 +33,7 @@ else
 	echo "Error typing linux image"
 	exit 1
 fi
+echo "Updating kernel image...DONE"
 
 
 echo "Installing system operating tools..."
