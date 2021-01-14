@@ -64,9 +64,11 @@ apt-get install -y lightdm
 
 echo "Installing system operating tools...DONE"
 
-echo "Starting Xserver, set keybind for windows manager"
-read -p "Press ENTER to continue"
-startx
+echo "All system tools are installed. After to REBOOT system you run 'startx' command and set windows manager keybind"
+read -p "Press ENTER to reboot"
+reboot
+
+exit 0
 
 # xrandr: setting monitor (displays)
 # xpdf: pdf viewer
