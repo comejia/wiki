@@ -1,22 +1,55 @@
 #!/bin/bash
 
+if [ $(whoami) != "root" ] 
+then
+	echo "You need run this script as root"
+	exit 1
+fi
+
+echo "Installing certificates..."
+apt-get install -y ca-certificates
+echo "Installing certificates...DONE"
+
+echo "Updating system repositories..."
+echo "Testing repository"
+echo "deb http://deb.debian.org/debian/ testing main contrib non-free" >> /etc/apt/sources.list
+echo "Buster backports"
+echo "deb http://deb.debian.org/debian/ buster-backports main contrib non-free" >> /etc/apt/sources.list
+read -p "Check changes in sources.list and press ENTER to continue"
 apt-get update
+echo "Updating system repositories...DONE"
 
-apt-get install vim inxi neofetch htop mesa-utils hardinfo xutils usbutils pm-utils cpufrequtils git lm-sensors firefox-esr libcanberra0 pulseaudio pavucontrol tree build-essential curl
+echo "Installing system operating tools..."
+# System tools
+apt-get install -y -t testing live-task-standard
+apt-get install -y build-essential vim git htop curl wget libcanberra0 tree bash-completion
 
-apt-get install -t buster-backports firmware-linux firmware-misc-nonfree firmware-linux-nonfree
+# Hardware tools
+apt-get install -y inxi neofetch mesa-utils hardinfo xutils usbutils pm-utils cpufrequtils lm-sensors
 
-# i3 windows manager
-# apt-get install i3
+# Firmware tools
+apt-get install -y -t buster-backports firmware-linux firmware-misc-nonfree firmware-linux-nonfree
 
-# Display manager
-# apt-get install lightdm
+# Multimedia tools
+apt-get install -y pulseaudio pavucontrol mpv mediainfo file highlight w3m-img caca-utils atool poppler-utils ffmpeg ffmpegthumbnailer xpdf feh
 
-# Start server if you did install a Display manager
-# startx
+# Miscellaneous tools
+apt-get install -y xbindkeys fonts-noto-color-emoji xbacklight
 
 # Extra tools
-# apt-get install rsync ranger mpv mediainfo file highlight w3m-img caca-utils atool poppler-utils ffmpegthumbnailer xpdf feh xrandr mtp-tools xbindkeys fonts-noto-color-emoji xbacklight
+apt-get install -y ranger rsync atool xrandr mpt-tools firefox-esr
+
+# Windows manager
+apt-get install -y i3
+
+# Display manager
+apt-get install -y lightdm
+
+echo "Installing system operating tools...DONE"
+
+echo "Starting Xserver, set keybind for windows manager"
+read -p "Press ENTER to continue"
+startx
 
 # xrandr: setting monitor (displays)
 # xpdf: pdf viewer
@@ -30,5 +63,4 @@ apt-get install -t buster-backports firmware-linux firmware-misc-nonfree firmwar
 # pavucontrol: audio control by GUI
 # mpt-tools: media transport protocol, detect Android phones. Use mtp-detect command if you have a problem
 # xbindkeys: To control multimedia buttons
-
 # inxi, neofetch, hardinfo, cpufrequtils: tools to show system hardware and software info
