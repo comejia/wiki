@@ -19,6 +19,19 @@ read -p "Check changes in sources.list and press ENTER to continue"
 apt-get update
 echo "Updating system repositories...DONE"
 
+echo "Updating kernel image..."
+apt-cache search linux-image
+echo "Enter linux image and headers"
+read linux_image linux_headers
+if [ -n linux-image ]
+then
+	apt-get install --yes $linux_image $linux_headers
+else
+	echo "Error typing linux image"
+	exit 1
+fi
+
+
 echo "Installing system operating tools..."
 # System tools
 apt-get install -y -t testing live-task-standard
