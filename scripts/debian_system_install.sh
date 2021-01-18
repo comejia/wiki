@@ -7,16 +7,16 @@ then
 fi
 
 echo "Installing certificates..."
-apt-get install -y ca-certificates
+apt-get install -y ca-certificates apt-transport-https
 echo "Installing certificates...DONE"
 
 echo "Updating repositories..."
-echo "Add contrib and non-free option to source.list"
+echo "Add contrib and non-free option to source.list. And changes http by https"
 read -p "Press ENTER to continue"
 echo "Adding buster-backports repository"
-echo "deb http://deb.debian.org/debian/ buster-backports main contrib non-free" >> /etc/apt/sources.list
+echo "deb https://deb.debian.org/debian/ buster-backports main contrib non-free" >> /etc/apt/sources.list
 echo "Adding testing repository"
-echo "deb http://deb.debian.org/debian/ testing main contrib non-free" >> /etc/apt/sources.list
+echo "deb https://deb.debian.org/debian/ testing main contrib non-free" >> /etc/apt/sources.list
 read -p "Check changes in sources.list and press ENTER to continue"
 apt-get update
 echo "Updating repositories...DONE"
