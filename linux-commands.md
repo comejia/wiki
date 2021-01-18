@@ -70,3 +70,10 @@ NOTE: the integer number at the end of each command denotes a priority. Higher n
 $ apt-cache search package_name # search package_name
 $ apt-cache show package_name # show all info of package_name
 ```
+
+## Reinstall Grub
+When you install a new S.O Linux the grub changes. So you need reinstall grub in the system that you want.
+```
+# grub-install --recheck /dev/sdX
+# update-grub
+```
