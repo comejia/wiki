@@ -26,7 +26,7 @@ echo "Updating kernel image..."
 apt-cache search linux-image
 echo "Enter linux image and headers kernel"
 read linux_image linux_headers
-if [ -n $linux_image ]
+if [ -n "$linux_image" ]
 then
 	apt-get install --yes $linux_image $linux_headers
 else

@@ -11,7 +11,7 @@ echo "Installing WIFI driver..."
 inxi -N
 echo "Search driver your s.o. needed and enter the package"
 read wifi_driver
-if [ -n $wifi_driver ]
+if [ -n "$wifi_driver" ]
 then
 	apt-get install --yes $wifi_driver
 else
