@@ -97,7 +97,7 @@ iface lo inet loopback
 #iface eno2 inet dhcp
 ```
 
-3) Allow to Networkmanager manage networks
+3) Allow to Networkmanager manage networks. Edit /etc/NetworkManager/NetworkManager.conf file
 ```
 ...
 [ifupdown]
