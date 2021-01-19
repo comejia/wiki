@@ -77,3 +77,43 @@ When you install a new S.O Linux the grub changes. So you need reinstall grub in
 # grub-install --recheck /dev/sdX
 # update-grub
 ```
+
+## Network manager (without gui)
+1) Install network manager
+```
+# apt-get install network-manager
+```
+If you have any problems with version of gcc, install:
+```
+# apt-get install gcc-8-base
+```
+
+2) Edit /etc/network/interfaces file about ethernet and wifi. Example:
+```
+auto lo
+iface lo inet loopback
+
+#allow-hotplug eno2
+#iface eno2 inet dhcp
+```
+
+3) Allow to Networkmanager manage networks
+```
+...
+[ifupdown]
+managed=true
+```
+
+4) Restart the service
+```
+# systemctl restart Networkmanager
+```
+
+`nmcli` is the command to manager networks. Here there are some utils commands:
+- nmcli device status
+- nmcli device show
+- nmcli connection show
+- nmcli device wifi list
+- nmcli device wifi connect SSID-Name password wireless-password
+- nmcli radio wifi off
+- nmcli radio wifi on
