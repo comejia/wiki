@@ -117,3 +117,26 @@ managed=true
 - nmcli device wifi connect SSID-Name password wireless-password
 - nmcli radio wifi off
 - nmcli radio wifi on
+
+## Syncing files
+```
+$ rsync -avzh local_files_path remote_path
+```
+
+`remote_path` can be other local path or a path in some remote server
+```
+$ rsync -avzh /tmp/backup/ user_name@192.168.1.xx:remote_path
+```
+NOTE: after to run above command you need enter the password of remote server
+
+
+## Managing screen positions
+1) List displays
+```
+$ xrandr
+```
+
+2) Set position
+```
+$ xrandr --output HDMI-X --auto --left-of eDP-Y
+```
