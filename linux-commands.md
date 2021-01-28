@@ -140,3 +140,10 @@ $ xrandr
 ```
 $ xrandr --output HDMI-X --auto --left-of eDP-Y
 ```
+
+
+## Unpack files
+```
+$ tar -xzvf name_file.tar.gz
+$ tar -xJvf name_file.tar.xz
+```
