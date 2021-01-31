@@ -5,6 +5,7 @@
 #email=cesarmejia555@yahoo.com.ar
 #git config --global user.name "$user"
 #git config --global user.email "$email"
+#git config --global pull.rebase false
 
 if [ $(whoami) != "root" ] 
 then
