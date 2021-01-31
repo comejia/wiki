@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Setup git config
+#user=cmejia
+#email=cesarmejia555@yahoo.com.ar
+#git config --global user.name "$user"
+#git config --global user.email "$email"
+
 if [ $(whoami) != "root" ] 
 then
 	echo "You need run this script as root"
