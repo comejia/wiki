@@ -12,7 +12,7 @@ echo "Installing certificates...DONE"
 
 echo "Updating repositories..."
 echo "Add contrib and non-free option to source.list. And changes http by https"
-read -p "Press ENTER to continue"
+read -p "Press [ENTER] to continue"
 echo "Adding buster-backports repository"
 echo "deb https://deb.debian.org/debian/ buster-backports main contrib non-free" >> /etc/apt/sources.list
 echo "Adding testing repository"
@@ -34,7 +34,7 @@ else
 	exit 1
 fi
 echo "Updating kernel image...DONE"
-read -p "Press ENTER to continue"
+read -p "Press [ENTER] to continue"
 
 echo "Installing system operating tools..."
 # System tools
@@ -63,10 +63,10 @@ apt-get install -y i3
 apt-get install -y lightdm
 
 echo "Installing system operating tools...DONE"
-read -p "Press ENTER to continue"
+read -p "Press [ENTER] to continue"
 
 echo "All system tools are installed. After to REBOOT system you run 'startx' command and set windows manager keybind"
-read -p "Press ENTER to reboot"
+read -p "Press [ENTER] to reboot"
 reboot
 
 exit 0
