@@ -3,7 +3,7 @@
 set -e
 
 if [ $(whoami) = "root" ]; then
-	echo "Running this script as normal user"
+	echo "Running this script as normal user, no root"
 	exit 1
 fi
 
@@ -11,6 +11,8 @@ cd ~/
 rm -rf .bash-git-prompt/
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 
+# Title to find in .bashrc file. If it doesn't exist, git-prompt setup 
+# will append at the end of the file
 title="# Git prompt"
 
 if [ $(grep -x "$title" ~/.bashrc | wc -l) -eq 0 ]; then
