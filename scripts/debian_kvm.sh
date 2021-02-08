@@ -2,6 +2,8 @@
 
 set -e
 
+USERNAME=cmejia
+
 if [ $(whoami) != "root" ]; then
 	echo "Run this script '$0' as root"
 	exit 1
@@ -17,6 +19,12 @@ if [ $virt -eq 0 ]; then
 fi
 
 apt-get install --no-install-recommends --yes qemu-system qemu-utils libvirt-daemon-system libvirt-clients virtinst
+
+adduser $USERNAME libvirt
+adduser $USERNAME libvirt-qemu
+newgrp libvirt
+newgrp libvirt-qemu
+
 echo "Installing KVM...DONE"
 
 exit 0
