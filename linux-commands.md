@@ -147,3 +147,15 @@ $ xrandr --output HDMI-X --auto --left-of eDP-Y
 $ tar -xzvf name_file.tar.gz
 $ tar -xJvf name_file.tar.xz
 ```
+
+
+## List groups and users
+Groups
+```
+$ cat /etc/group
+$ getent group
+```
+Users
+```
+$ cat /etc/passwd
+```
