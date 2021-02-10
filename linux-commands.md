@@ -159,3 +159,7 @@ Users
 ```
 $ cat /etc/passwd
 ```
+Add user to group
+```
+# usermod -aG groupname usernname
+```
