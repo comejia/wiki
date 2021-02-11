@@ -13,7 +13,7 @@ echo "Adding user to sudoers..."
 
 echo "$USERNAME ALL=(ALL:ALL) NOPASSWD:ALL" | tee /etc/sudoers.d/$USERNAME
 
-echo "Adding user to sudoers"
+echo "Adding user to sudoers...DONE"
 
 exit 0
 
