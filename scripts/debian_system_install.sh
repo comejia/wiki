@@ -39,7 +39,7 @@ read -p "Press [ENTER] to continue"
 echo "Installing system operating tools..."
 # System tools
 apt-get install -y -t testing live-task-standard
-apt-get install -y build-essential xterm vim git htop curl wget libcanberra0 tree bash-completion ssh
+apt-get install -y build-essential xterm vim git htop curl wget libcanberra0 tree bash-completion ssh fuse
 
 # Hardware tools
 apt-get install -y inxi neofetch mesa-utils hardinfo xutils usbutils pm-utils cpufrequtils lm-sensors
@@ -54,7 +54,7 @@ apt-get install -y pulseaudio pavucontrol mpv mediainfo file highlight w3m-img c
 apt-get install -y xbindkeys fonts-noto-color-emoji xbacklight
 
 # Extra tools
-apt-get install -y ranger rsync atool mtp-tools firefox-esr
+apt-get install -y ranger rsync atool mtp-tools firefox-esr jq
 
 # Windows manager
 apt-get install -y i3
