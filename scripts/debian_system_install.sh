@@ -55,6 +55,7 @@ apt-get install -y xbindkeys fonts-noto-color-emoji xbacklight
 
 # Extra tools
 apt-get install -y ranger rsync atool mtp-tools firefox-esr jq
+apt-get install --yes libreoffice-writer libreoffice-calc libreoffice-impress
 
 # Windows manager
 apt-get install -y i3
