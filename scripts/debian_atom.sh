@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -e
+set -e
 
 USERNAME=cmejia
 
@@ -9,16 +9,17 @@ if [ $(whoami) != "root" ]; then
 	exit 1
 fi
 
-echo "Installing Atom..."
-
-apt-get update
-#apt-get install --yes libgconf-2-4
-#apt --fix-broken install --yes
+echo "Installing Atom IDE..."
 
 cd /tmp
 wget https://atom.io/download/deb -O atom-amd64.deb
-#dpkg -i atom-amd64.deb
+
+# All dependencies will be instelled with this form
 apt install --yes ./atom-amd64.deb
+
+# For older Linux distributions (disable set -e flag)
+#dpkg -i atom-amd64.deb
+#apt-get install -f
 
 echo "Installing Atom...DONE"
 
