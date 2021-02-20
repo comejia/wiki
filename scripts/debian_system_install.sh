@@ -45,7 +45,8 @@ apt-get install -y build-essential xterm vim git htop curl wget libcanberra0 tre
 apt-get install -y inxi neofetch mesa-utils hardinfo xutils usbutils pm-utils cpufrequtils lm-sensors
 
 # Firmware tools
-apt-get install -y -t buster-backports firmware-linux firmware-misc-nonfree firmware-linux-nonfree
+apt-get install -y -t testing firmware-linux # firmware-linux-nonfree firmware-misc-nonfree
+#apt-get install --yes -t testing firmware-realtek # firmware-atheros
 
 # Multimedia tools
 apt-get install -y pulseaudio pavucontrol mpv mediainfo file highlight w3m-img caca-utils atool poppler-utils ffmpeg ffmpegthumbnailer xpdf feh
