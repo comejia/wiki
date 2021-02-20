@@ -14,7 +14,7 @@ echo "Installing Atom IDE..."
 cd /tmp
 wget https://atom.io/download/deb -O atom-amd64.deb
 
-# All dependencies will be instelled with this form
+# All dependencies will be installed with this form
 apt install --yes ./atom-amd64.deb
 
 # For older Linux distributions (disable set -e flag)
