@@ -3,7 +3,7 @@
 set -e
 
 USERNAME=cmejia
-APPIUM_DESKTOP_BIN_NAME=appium-desktop
+APPIUM_DESKTOP_BIN_NAME=appium-desktop.AppImage
 
 if [ $(whoami) != "root" ]; then
 	echo "Run this script '$0' as root"
