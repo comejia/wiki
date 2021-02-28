@@ -100,4 +100,10 @@ If you want get remote data:
 	$ git add --all
 	$ git commit -am "new commit over remote commit"
 	$ git push origin branch_name
-	
+
+
+## Tags
+```
+$ git tag -a <tag> -m <"description">
+$ git push origin <tag>
+```
