@@ -163,3 +163,15 @@ Add user to group
 ```
 # usermod -aG groupname usernname
 ```
+
+
+## Installing .deb packages
+Installing package and dependencies
+```
+# apt install ./package_name.deb
+```
+Installing first package and then dependencies
+```
+# dpkg -i package_name.deb
+# apt-get install -f
+```
