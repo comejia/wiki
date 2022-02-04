@@ -7,6 +7,7 @@
 
 ## Styles
 * Rainbow Brackets
+* Atom material icon
 * FiraCode
 
 Note: To use FiraCode before install fira code font in your system
