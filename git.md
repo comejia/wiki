@@ -120,4 +120,17 @@ Changing origin
 $ git remote set-url origin git@github.com:<user>/new-repository.git
 ```
 
+## Bundle files
 
+Create a bundle of a repository
+```
+$ git bundle create <file.bundle> <git-rev-list-args>
+
+Example
+$ git bundle create my.bundle develop
+```
+
+Clone a bundle
+```
+$ git clone <file.bundle>
+```
