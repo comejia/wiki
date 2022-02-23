@@ -107,3 +107,17 @@ If you want get remote data:
 $ git tag -a <tag> -m <"description">
 $ git push origin <tag>
 ```
+
+## Remote URL
+
+Setting first time origin
+```
+$ git remote add origin git@github.com:<user>/repository.git
+```
+
+Changing origin
+```
+$ git remote set-url origin git@github.com:<user>/new-repository.git
+```
+
+
