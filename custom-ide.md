@@ -3,7 +3,7 @@
 ## Color themes
 * Gruvbox theme
 * One dark theme
-* Monocaid theme
+* **Monokaid theme**
 
 ## Styles
 * Rainbow Brackets
