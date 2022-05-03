@@ -134,3 +134,12 @@ Clone a bundle
 ```
 $ git clone <file.bundle>
 ```
+
+## Git flow config
+To close a PR or MR from your console
+```
+git config --global gitflow.feature.finish.push yes
+git config --global gitflow.bugfix.finish.push yes
+git config --global gitflow.hotfix.finish.push yes
+git config --global gitflow.release.finish.push yes
+```
