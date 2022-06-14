@@ -14,8 +14,8 @@ avdmanager list avd
 
 ## Install app
 ```
-$ adb install -r <app_name.apk>
-$ adb install -s <app_name.apk> # -s install app on SD card if it's possible
+$ adb install -r <path/to/app.apk> # -r: reinstall an app
+$ adb -s <device_id> install <path/to/app.apk>
 ```
 
 
